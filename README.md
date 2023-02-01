@@ -12,15 +12,35 @@ All experiments were implemented python and run on two RTX3090 GPUs and Intel(R)
 * Matplotlib (optional, only for plotting)
 
 ## Quick start
-### under the ./SPO_V4/ directory to train the SpoNet
-python run.py --problem PM --graph_size 20 --run_name 'PM20'
-python run.py --problem PM --graph_size 20 --run_name 'PM20'
-python run.py --problem PM --graph_size 20 --run_name 'PM20'
+Under the ./SPO_V4/ directory to train the SpoNet for p-Median, p-Center, and MCLP.
+
+python run.py --problem PM --graph_size 20 --p 4 --r 0.32 --run_name 'PM20'
+
+python run.py --problem PC --graph_size 20 --p 4 --r 0.32 --run_name 'PC20'
+
+python run.py --problem MCLP --graph_size 20 --p 4 --r 0.3 --run_name 'MCLP20'
 ## Usage
+### Generating datasets
+Generating the PM instances with 500 nodes with 15 medians
+```bash
+python gen_data.py --problem PM --graph_size 500 --p 15
+```
+
 ### Training
-For training MCLP instances with 50 nodes and using rollout as REINFORCE baseline:
+For training the PM instances with 50 nodes and using rollout as REINFORCE baseline:
 ```bash
 python run.py --problem PM --graph_size 50 --run_name 'PM50'
+```
+### Evalution
+To evaluate the PM instances with 50 nodes by sample1280 strategy:
+```bash
+python eval.py "../data/PM/PM_20.pkl" --decode_strategy sample --width 1280
+```
+
+### Plotting
+To visualize the solution results of different algorithms for PM problem (Need Gurobi solver)
+```bash
+python plot_p-Median.py 
 ```
 
 #### Multiple GPUs
@@ -34,19 +54,18 @@ Note that using multiple GPUs has limited efficiency for small problem sizes (up
 #### Warm start
 You can initialize a run using a pretrained model by using the `--load_path` option:
 ```bash
-python run.py --graph_size 100 --load_path pretrained/tsp_100/epoch-99.pt
+python run.py --graph_size 100 --load_path pretrained/PM_100/epoch-99.pt
 ```
 
 The `--load_path` option can also be used to load an earlier run, in which case also the optimizer state will be loaded:
 ```bash
-python run.py --graph_size 20 --load_path 'outputs/tsp_20/tsp20_rollout_{datetime}/epoch-0.pt'
+python run.py --graph_size 20 --load_path 'outputs/PM_20/PM20_{datetime}/epoch-0.pt'
 ```
 
 The `--resume` option can be used instead of the `--load_path` option, which will try to resume the run, e.g. load additionally the baseline state, set the current epoch/step counter and set the random number generator state.
 
-### Example MCLP solution
-gurobi solver slove MCLP instances
-```bash
-python gurobi_MCLP 
-```
+### Visualization results
+
+![PM100](images/MCLP.png)
+![PC100](images/MCLP.png)
 ![MCLP100](images/MCLP.png)
