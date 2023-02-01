@@ -1,0 +1,10 @@
+epoch: 0, train_batch_id: 0, avg_cost: -62.9375
+epoch: 5, train_batch_id: 0, avg_cost: -65.6328125
+epoch: 10, train_batch_id: 0, avg_cost: -67.046875
+epoch: 15, train_batch_id: 0, avg_cost: -67.09375
+epoch: 20, train_batch_id: 0, avg_cost: -68.171875
+epoch: 25, train_batch_id: 0, avg_cost: -68.0234375
+epoch: 30, train_batch_id: 0, avg_cost: -67.625
+epoch: 35, train_batch_id: 0, avg_cost: -67.7890625
+epoch: 40, train_batch_id: 0, avg_cost: -68.3671875
+epoch: 45, train_batch_id: 0, avg_cost: -68.2578125

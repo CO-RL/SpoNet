@@ -1,0 +1,2 @@
+epoch: 0, train_batch_id: 0, avg_cost: 0.5060103535652161
+epoch: 0, train_batch_id: 50, avg_cost: 0.4069109857082367
