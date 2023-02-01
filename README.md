@@ -1,6 +1,6 @@
-# Deep Reinforcement Learning for Solveing the Maximum Covering Location Problem
-This project is based on the research of [Attention, Learn to Solve Routing Problems!](https://openreview.net/forum?id=ByxBFsRqYm) which has been accepted at ICLR 2019.
-
+# SpoNet: Learn to Solve Spatial Optimization Problem with Deep Reinforcement Learning
+This project is the code for the study: SpoNet: Learn to Solve Spatial Optimization Problem with Deep Reinforcement Learning.
+We have established a unified framework for solving p-Median, p-Center, and MCLP.
 ## Dependencies
 All experiments were implemented python and run on two RTX3090 GPUs and Intel(R) Xeon(R) Gold 6230 CPU @2.10GHz. 
 
@@ -12,13 +12,15 @@ All experiments were implemented python and run on two RTX3090 GPUs and Intel(R)
 * Matplotlib (optional, only for plotting)
 
 ## Quick start
-python run.py --problem MCLP --graph_size 20 --baseline rollout --run_name 'MCLP20_rollout'
-
+### under the ./SPO_V4/ directory to train the SpoNet
+python run.py --problem PM --graph_size 20 --run_name 'PM20'
+python run.py --problem PM --graph_size 20 --run_name 'PM20'
+python run.py --problem PM --graph_size 20 --run_name 'PM20'
 ## Usage
 ### Training
 For training MCLP instances with 50 nodes and using rollout as REINFORCE baseline:
 ```bash
-python run.py --graph_size 50 --baseline rollout --run_name 'MCLP50_rollout'
+python run.py --problem PM --graph_size 50 --run_name 'PM50'
 ```
 
 #### Multiple GPUs
