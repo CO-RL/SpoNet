@@ -66,6 +66,6 @@ The `--resume` option can be used instead of the `--load_path` option, which wil
 
 ### Visualization results
 
-![PM100](images/MCLP.png)
-![PC100](images/MCLP.png)
-![MCLP100](images/MCLP.png)
+![PM100](images/pm_100_15.pdf)
+![PC100](images/pc_100_15.pdf)
+![MCLP100](images/mclp_100_15.pdf)
