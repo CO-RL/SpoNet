@@ -13,12 +13,11 @@ All experiments were implemented python and run on two RTX3090 GPUs and Intel(R)
 
 ## Quick start
 Under the ./SPO_V4/ directory to train the SpoNet for p-Median, p-Center, and MCLP.
-
+```bash
 python run.py --problem PM --graph_size 20 --p 4 --r 0.32 --run_name 'PM20'
-
 python run.py --problem PC --graph_size 20 --p 4 --r 0.32 --run_name 'PC20'
-
 python run.py --problem MCLP --graph_size 20 --p 4 --r 0.3 --run_name 'MCLP20'
+```
 ## Usage
 ### Generating datasets
 Generating the PM instances with 500 nodes with 15 medians
