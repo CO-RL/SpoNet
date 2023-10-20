@@ -74,7 +74,7 @@ The `--resume` option can be used instead of the `--load_path` option, which wil
 ![MCLP100](image/mclp_100_15.jpg)
 
 ### Real scenario
-<img src="./image/Gurobi.png" alt="drawing" width="600"/>
+<img src="./image/Gurobi.png" alt="drawing" width="600px"/>
 ![Gurobi](image/Gurobi.png =100×20)
 ![SA](image/SA.pn =150×150)
 ![SpoNet](image/SpoNet.png =150×150)
