@@ -74,4 +74,9 @@ The `--resume` option can be used instead of the `--load_path` option, which wil
 ![MCLP100](image/mclp_100_15.jpg)
 
 ### Real scenario
-<img src="./image/Gurobi.png" alt="drawing" width="400px"/><img src="./image/SA.png" alt="drawing" width="400px"/><img src="./image/SpoNet.png" alt="drawing" width="400px"/>
+#### Gurobi
+<img src="./image/Gurobi.png" alt="drawing" width="400px"/>
+#### SA
+<img src="./image/SA.png" alt="drawing" width="400px"/>
+#### SpoNet
+<img src="./image/SpoNet.png" alt="drawing" width="400px"/>
