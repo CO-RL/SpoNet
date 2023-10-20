@@ -1,6 +1,10 @@
 # SpoNet: Learn to Solve Spatial Optimization Problem with Deep Reinforcement Learning
 This project is the code for the study: SpoNet: Learn to Solve Spatial Optimization Problem with Deep Reinforcement Learning.
 We have established a unified framework for solving p-Median, p-Center, and MCLP.
+
+## update 2023.10.20
+Added a case study of the emergency location in file ./emergency_location.
+
 ## Dependencies
 All experiments were implemented python and run on two RTX3090 GPUs and Intel(R) Xeon(R) Gold 6230 CPU @2.10GHz. 
 
